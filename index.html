@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My VTI Viewer</title>
+  <script src="https://unpkg.com/itk-vtk-viewer@latest/dist/itkVtkViewer.js"></script>
+  <style>
+    html, body, #viewerContainer {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewerContainer"></div>
+  <script>
+    itkVtkViewer.createViewer('#viewerContainer', {
+      uiCollapsed: false,
+      fileURL: 'https://shivvvy7.github.io/vti-viewer/Temp_out.vti'
+    });
+  </script>
+</body>
+</html>
