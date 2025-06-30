@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>🧪 Shivvvy's Custom VTI Viewer</title>
-  <script src="https://unpkg.com/itk-vtk-viewer@latest/dist/itkVtkViewer.js"></script>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      overflow: hidden;
-      font-family: sans-serif;
-      background: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      padding: 1rem;
-      background: #1f1f1f;
-      color: #fff;
-      text-align: center;
-    }
-    #viewerContainer {
-      height: calc(100% - 60px);
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>🧪 Shivvvy's VTI Viewer</h1>
-    <p>Now clearly not the default app</p>
-  </header>
-  <div id="viewerContainer"></div>
-  <script>
-    itkVtkViewer.createViewer('#viewerContainer', {
-      uiCollapsed: false,
-      fileURL: 'https://shivvvy7.github.io/vti-viewer/public/Temp_out.vti'
-    });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>VTK Viewer</title>
+    <script src="https://unpkg.com/itk-vtk-viewer@latest/dist/itkVtkViewer.js"></script>
+    <style>
+      html, body, #viewerContainer {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="viewerContainer"></div>
+    <script>
+      itkVtkViewer.createViewer('#viewerContainer', {
+        uiCollapsed: false,
+        fileURL: 'https://shivvvy7.github.io/vti-viewer/public/Temp_out.vti'
+      });
+    </script>
+  </body>
 </html>
