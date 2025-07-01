@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>VTI Viewer</title>
+    <title>VTK Viewer</title>
     <script src="https://unpkg.com/itk-vtk-viewer@latest/dist/itkVtkViewer.js"></script>
     <style>
       html, body, #viewerContainer {
@@ -21,7 +21,10 @@
         itkVtkViewer.createViewer('#viewerContainer', {
           uiCollapsed: false,
           fileURL: 'https://shivvvy7.github.io/vti-viewer/public/Temp_out.vti'
-        }).catch(console.error);
+        }).catch(error => {
+          console.error('Viewer failed to load:', error);
+          document.body.innerHTML = '<h2 style="color:red;padding:20px;">Failed to load VTI viewer.</h2>';
+        });
       });
     </script>
   </body>
