@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>VTK Viewer</title>
+    <title>VTI Viewer</title>
     <script src="https://unpkg.com/itk-vtk-viewer@latest/dist/itkVtkViewer.js"></script>
     <style>
       html, body, #viewerContainer {
-        height: 100%;
         margin: 0;
         padding: 0;
+        height: 100%;
+        width: 100%;
         overflow: hidden;
       }
     </style>
@@ -16,9 +17,11 @@
   <body>
     <div id="viewerContainer"></div>
     <script>
-      itkVtkViewer.createViewer('#viewerContainer', {
-        uiCollapsed: false,
-        fileURL: 'https://shivvvy7.github.io/vti-viewer/public/Temp_out.vti'
+      window.addEventListener('DOMContentLoaded', () => {
+        itkVtkViewer.createViewer('#viewerContainer', {
+          uiCollapsed: false,
+          fileURL: 'https://shivvvy7.github.io/vti-viewer/public/Temp_out.vti'
+        }).catch(console.error);
       });
     </script>
   </body>
