@@ -18,7 +18,8 @@
     <div id="viewerContainer"></div>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        itkVtkViewer.createViewer('#viewerContainer', {
+        const container = document.getElementById('viewerContainer');
+        itkVtkViewer.createViewer(container, {
           uiCollapsed: false,
           fileURL: 'https://shivvvy7.github.io/vti-viewer/public/Temp_out.vti'
         }).catch(error => {
